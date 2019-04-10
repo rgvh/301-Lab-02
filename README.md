@@ -13,19 +13,19 @@ Actual time needed to complete: 57 min
 
 Number and name of feature: #2 Filter Images
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 60 min
 
-Start time: _____
+Start time: 8:45pm
 
-Finish time: _____
+Finish time: 3:50pm, next day
 
-Actual time needed to complete: _____
+Actual time needed to complete: 3 hours
 
-Number and name of feature: ________________________________
+Number and name of feature: Feature 3 Style the Application
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 60 mins
 
-Start time: _____
+Start time: 4:00
 
 Finish time: _____
 

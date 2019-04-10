@@ -7,11 +7,11 @@ Estimate of time needed to complete: 60 min
 
 Start time: 7:40
 
-Finish time: _____
+Finish time: 8:33
 
-Actual time needed to complete: _____
+Actual time needed to complete: 57 min
 
-Number and name of feature: ________________________________
+Number and name of feature: #2 Filter Images
 
 Estimate of time needed to complete: _____
 

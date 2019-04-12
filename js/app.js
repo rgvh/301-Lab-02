@@ -22,10 +22,9 @@ Horn.prototype.render = function () {
   hornClone.find('img').attr('src', this.image_url);
   hornClone.find('h2').text(this.title);
   hornClone.find('p').text(this.description);
-  // hornClone.find("div").text(this.keyword);
-  // hornClone.find("").text(this.horns);
-  hornClone.removeClass('clone');
+  hornClone.find("div").text(this.keyword);
   hornClone.attr('class', this.keyword);
+  hornClone.removeClass('clone');
 }
 
 Horn.readJson = () => {
@@ -33,10 +32,27 @@ Horn.readJson = () => {
     .then(data => {
       data.forEach(item => {
         Horn.allHorns.push(new Horn(item));
-      })
+      });
+      Horn.allHorns.forEach(image => {
+        $('main').append(image.render());
+      });
     })
-    .then(Horn.loadHorns)
-}
+    .then(Horn.populateFilter)
+    .then(Horn.handleFilter);
+};
+Horn.populateFilter = () => {
+  let filterKeywords = [];
+  $('option').not(':first').remove();
+  Horn.allHorns.forEach(image => {
+    if (!filterKeywords.includes(image.keyword))
+    filterKeywords.push(image.keyword);
+  });
+  filterKeywords.sort();
+  filterKeywords.forEach(keyword => {
+    let optionTag = `<option value="${keyword}'>${keyword}</option>`;
+    $('select').append(optionTag);
+  });
+};
 
 Horn.loadHorns = () => {
   Horn.allHorns.forEach(horn => horn.render())
